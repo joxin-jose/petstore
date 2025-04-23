@@ -1,11 +1,22 @@
+
+
+
+
+
+
 asyncapi: '2.6.0'
+
+
+
+
+
 info:
   title: Streetlights Kafka API
   version: '1.0.0'
   description: |
     The Smartylighting Streetlights API allows you to remotely manage the city lights.
 
-    ### Check out its awesome features:
+    ###        Check out its awesome features:
 
     * Turn a specific streetlight on/off 🌃
     * Dim a specific streetlight 😎
@@ -23,6 +34,14 @@ servers:
       - saslScram: []
 
 defaultContentType: application/json
+
+
+
+
+
+
+
+
 
 channels:
   smartylighting.streetlights.1.0.event.{streetlightId}.lighting.measured:
@@ -70,17 +89,6 @@ channels:
         - $ref: '#/components/operationTraits/kafka'
       message:
         $ref: '#/components/messages/dimLight'
-
-
-
-
-
-
-
-
-
-
-        
 
 components:
   messages:
