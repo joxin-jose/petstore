@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: Product APIs
+  description: APIs feor the Product Catalog Products
+  version: 1.0.0
+servers:
+- url: https://virtserver.dev.swaggerhub.com/ownerorg/SCM/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: https://virtserver.dev.swaggerhub.com/ownerorg/scmtest/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /products:
+    get:
+      tags:
+      - Products
+      summary: retrives product data
+      description: |
+        This endpoint retrives product data based on catalog owner.
+      operationId: getAllProducts
+      parameters:
+      - name: catalogOwner
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          $ref: "#/components/schemas/Test"
+      responses:
+        default:
+          description: aa
+components:
+  schemas:
+    Test:
+      type: object
+      properties:
+        sizeCm:
+          properties:
+            max:
+              type: integer
