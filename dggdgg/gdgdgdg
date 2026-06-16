@@ -14,7 +14,7 @@
   },
   "servers" : [ {
     "url" : "https://virtserver.dev.swaggerhub.com/ownerorg/testsasasasasa/1.0.0",
-    "description" : "SwaggerHub API Auto Mocking"
+    "description" : "SwaggerHub"
   } ],
   "tags" : [ {
     "name" : "admins",
